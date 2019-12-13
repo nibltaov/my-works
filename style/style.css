@@ -1,0 +1,209 @@
+@import url(fonts.css);
+
+/* ROOT start */
+
+:root {
+    --f400: 'Montserrat Regular';
+    --f700: 'Montserrat Bold';
+    --ps400: 'Product Sans Regular';
+    --dark: #1f2020;
+    --gray: #282929;
+    --yellow: #ffcb02;
+    --yellow_dark: #d2a90b;
+    --linear: linear-gradient(133deg, var(--white) 35%, var(--yellow) 65%);
+}
+body {
+    background: var(--gray);
+}
+.logo {
+    color: var(--white);
+    font-size: 26px;
+    font-family: var(--ps400);
+    text-transform: uppercase;
+    line-height: 20px;
+    padding: 6px 18px;
+    border: 1px solid transparent;
+    border-image: 1 var(--linear);
+}
+.logo__text {
+    color: var(--yellow);
+}
+.logo:hover {
+    color: var(--white);
+    text-decoration: none;
+}
+.block-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+.block-header__title {
+    color: var(--yellow_dark);
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: var(--ps400);
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+.block-header__title::before {
+    content: '';
+    width: 52px;
+    height: 2px;
+    display: block;
+    background: var(--white);
+    align-self: flex-end;
+    margin-bottom: 8px;
+}
+.block-header__title::after {
+    content: '';
+    width: 52px;
+    height: 2px;
+    display: block;
+    background: var(--white);
+    margin-top: 8px;
+}
+.block-header__description {
+    color: var(--white);
+    font-family: var(--f400);
+    font-size: 18px;
+    line-height: 24px;
+    text-align: justify;
+    margin-bottom: 57px;
+}
+
+/* ROOT end */
+/* ********************************************************************************************** */
+/* HEADER start */
+.header__nav {
+    background: var(--dark);
+    padding: 23px 0 ;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+.header__nav-link {
+    margin-left: 55px;
+    color: var(--white);
+    font-size: 20px;
+    font-family: var(--ps400);
+    transition: 0.5s;
+}
+.header__nav-link:hover {
+    color: var(--yellow);
+    text-decoration: none;
+}
+.header__nav-link.dropdown-toggle::after {
+    display: none;
+}
+.header__nav-button {
+    color: var(--white);
+    font-size: 30px;
+    padding: 0;
+}
+.header__text {
+    background: url(../images/header_img_bg.jpg) no-repeat center center /cover;
+    padding: 50px 0;
+    margin-top: 80px;
+}
+.header__text-title {
+    color: var(--white);
+    font-family: var(--ps400);
+    font-size: 60px;
+    line-height: 45px;
+    margin-bottom: 50px;
+}
+.header__text-description {
+    font-family: var(--ps400);
+    font-size: 22px;
+    color: var(--white);
+    line-height: 27px;
+}
+
+/* HEADER end */
+/* ********************************************************************************************** */
+/* MAIN start */
+
+.main__slider {
+    background: var(--dark);
+    padding: 15px 0;
+}
+.main__slider-text {
+    background: var(--gray);
+    padding: 15px;
+    border-radius: 6px;
+
+}
+.main__slider-title {
+    color: var(--white);
+    font-family: var(--f700);
+    font-size: 24px;
+}
+.main__slider-span {
+    color: var(--yellow_dark);
+}
+.main__slider-description {
+    color: var(--white);
+    font-size: 18px;
+    line-height: 24px;
+}
+.main__slider-images {
+    object-fit: cover;
+    border-radius: 6px;
+}
+.main__slider-item {
+    padding: 0 15px;
+}
+.main__slide-button {
+    font-size: 35px;
+}
+.main__slide-button::before {
+    color: var(--yellow);
+}
+.main__slide-link {
+    opacity: 1;
+}
+
+/* MAIN end */
+/* ********************************************************************************************** */
+
+
+
+/* MEDIA start */
+
+@media (max-width: 991px) {
+    .main__slider-images {
+        max-height: 50vh;
+    }
+    .main__slider-text {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .header__nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+        display: block;
+    }
+    .header__text-title {
+        font-size: 35px;
+        line-height: 30px;
+    }
+    .header__text-description {
+        font-size: 20px;
+    }
+}
+@media (max-width: 575px) {
+    .header__text-title {
+        font-size: 30px;
+        line-height: 25px;
+        text-align: center;
+    }
+}
+
+/* MEDIA end */
+/* ********************************************************************************************** */
